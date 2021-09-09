@@ -12,16 +12,16 @@ const {
 
 router.use(checkAccessToken);
 
+router.post('/admin',
+    checkUserAvailability('email'),
+    isUserNotExists,
+    createAdmin);
+
 router.get('/', getAllUsers);
 
 router.use('/', isFullDataInUserRequest, isUserAdmin, checkUserAvailability('email'), isUserNotExists);
 
 router.post('/', createUser);
-
-router.post('/admin',
-    checkUserAvailability('email'),
-    isUserNotExists,
-    createAdmin);
 
 router.use('/:userId', isUserIdFormatCorrect);
 

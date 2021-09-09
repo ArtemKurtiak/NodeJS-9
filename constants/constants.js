@@ -6,5 +6,7 @@ module.exports = {
     RESET_PASS_ACTION_TOKEN_SECRET: process.env.RESET_PASS_ACTION_TOKEN_SECRET || 'ukraine228',
     DEFAULT_EMAIL: process.env.DEFAULT_EMAIL || 'test@gmail.com',
     DEFAULT_EMAIL_PASSWORD: process.env.DEFAULT_EMAIL_PASSWORD || 'test@gmail.com',
-    FORGET_PASS_FRONT_URL: 'http://localhost:5000'
+    FORGET_PASS_FRONT_URL: 'http://localhost:5000',
+    DEFAULT_ADMIN_EMAIL: process.env.DEFAULT_ADMIN_EMAIL || 'test@gmail.com',
+    DEFAULT_ADMIN_PASSWORD: process.env.DEFAULT_EMAIL_PASSWORD || 'Test1234#'
 };

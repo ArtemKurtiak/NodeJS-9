@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const { usersRouter, authRouter, laptopRouter } = require('./routers');
+const { userService } = require('./services');
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -33,4 +34,5 @@ function _errorHandler(err, req, res, next) {
 
 app.listen(process.env.PORT, () => {
     console.log(`Server run at port ${process.env.PORT}`);
+    userService.createDefaultAdmin();
 });
