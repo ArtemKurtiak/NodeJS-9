@@ -8,5 +8,9 @@ module.exports = {
     DEFAULT_EMAIL_PASSWORD: process.env.DEFAULT_EMAIL_PASSWORD || 'test@gmail.com',
     FORGET_PASS_FRONT_URL: 'http://localhost:5000',
     DEFAULT_ADMIN_EMAIL: process.env.DEFAULT_ADMIN_EMAIL || 'test@gmail.com',
-    DEFAULT_ADMIN_PASSWORD: process.env.DEFAULT_EMAIL_PASSWORD || 'Test1234#'
+    DEFAULT_ADMIN_PASSWORD: process.env.DEFAULT_EMAIL_PASSWORD || 'Test1234#',
+    AWS_ACCESS_KEY: process.env.AWS_ACCESS_KEY,
+    AWS_SECRET_KEY: process.env.AWS_SECRET_KEY,
+    AWS_REGION: process.env.AWS_REGION,
+    AWS_BUCKET_NAME: process.env.AWS_BUCKET_NAME
 };

@@ -1,10 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const fileUpload = require('express-fileupload');
 
 require('dotenv').config();
 
 const { usersRouter, authRouter, laptopRouter } = require('./routers');
-const { userService } = require('./services');
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -12,6 +12,8 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(fileUpload());
 
 app.use('/auth', authRouter);
 
@@ -34,5 +36,5 @@ function _errorHandler(err, req, res, next) {
 
 app.listen(process.env.PORT, () => {
     console.log(`Server run at port ${process.env.PORT}`);
-    userService.createDefaultAdmin();
+    // userService.createDefaultAdmin();
 });

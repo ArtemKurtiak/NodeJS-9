@@ -11,6 +11,9 @@ const Laptop = new Schema({
     },
     madeIn: {
         type: String
+    },
+    photo: {
+        type: String
     }
 }, { timestamps: true });
 
